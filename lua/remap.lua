@@ -6,9 +6,11 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- vim.g.mapleader = " "
-vim.keymap.set("n", "<F3>", vim.cmd.Lexplore)
+-- vim.keymap.set("n", "<f3>", vim.cmd.lexplore)
+vim.keymap.set("n", "<f3>", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<leader><f3>", vim.cmd.NvimTreeFindFile)
 
-vim.keymap.set('n', '<TAB>', '<C-w>w')
+vim.keymap.set('n', '<leader><TAB>', '<C-w>w')
 vim.keymap.set('n', '<c-a>', 'gg<S-v>G')
 vim.keymap.set('n', '<leader>s', ':vsplit<Return><C-w>w', { silent = true })
 
@@ -31,6 +33,6 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
---vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
---vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 

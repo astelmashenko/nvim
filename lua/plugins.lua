@@ -13,67 +13,70 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
--- TODO: need to use true-color terminal like kitty/iterm2
---  use({
---	  'rose-pine/neovim',
---	  as = 'rose-pine',
---	  config = function()
---		  vim.cmd('colorscheme rose-pine')
---	  end
---  })
+    -- TODO: need to use true-color terminal like kitty/iterm2
+    --  use({
+    --	  'rose-pine/neovim',
+    --	  as = 'rose-pine',
+    --	  config = function()
+    --		  vim.cmd('colorscheme rose-pine')
+    --	  end
+    --  })
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-  -- TODO: alternative file explorer
-  -- use {
-  --         'nvim-tree/nvim-tree.lua',
-  --         requires = {
-  --       	  'nvim-tree/nvim-web-devicons', -- optional, for file icons
-  --         },
-  --         tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  -- }
+    -- TODO: alternative file explorer
+    -- use {
+    --         'nvim-tree/nvim-tree.lua',
+    --         requires = {
+    --       	  'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    --         },
+    --         tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    -- }
 
-  -- use('mbbill/undotree')
+    -- use('mbbill/undotree')
 
-  use('tpope/vim-fugitive')
+    use('tpope/vim-fugitive')
 
-  use {
-	  'VonHeikemen/lsp-zero.nvim',
-	  requires = {
-		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},             -- Required
-		  {'williamboman/mason.nvim'},           -- Optional
-		  {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {'williamboman/mason.nvim'},           -- Optional
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp'},         -- Required
-		  {'hrsh7th/cmp-nvim-lsp'},     -- Required
-		  {'hrsh7th/cmp-buffer'},       -- Optional
-		  {'hrsh7th/cmp-path'},         -- Optional
-		  {'saadparwaiz1/cmp_luasnip'}, -- Optional
-		  {'hrsh7th/cmp-nvim-lua'},     -- Optional
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},         -- Required
+            {'hrsh7th/cmp-nvim-lsp'},     -- Required
+            {'hrsh7th/cmp-buffer'},       -- Optional
+            {'hrsh7th/cmp-path'},         -- Optional
+            {'saadparwaiz1/cmp_luasnip'}, -- Optional
+            {'hrsh7th/cmp-nvim-lua'},     -- Optional
 
-		  -- Snippets
-		  {'L3MON4D3/LuaSnip'},             -- Required
-		  {'rafamadriz/friendly-snippets'}, -- Optional
-	  }
-  }
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},             -- Required
+            {'rafamadriz/friendly-snippets'}, -- Optional
+        }
+    }
 
-  -- statusline plugin
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+    -- statusline plugin
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
-  -- comment plugin 
-  use {
-      'numToStr/Comment.nvim',
-      config = function()
-          require('Comment').setup()
-      end
-  }
+    -- comment plugin 
+    use 'numToStr/Comment.nvim'
 
-  use "lukas-reineke/indent-blankline.nvim"
+    use "lukas-reineke/indent-blankline.nvim"
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        -- tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
 
 end)
 
