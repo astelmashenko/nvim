@@ -1,8 +1,6 @@
 -- fat cursor
 vim.opt.guicursor = ""
 
---vim.opt.termguicolors=false
-
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -34,7 +32,7 @@ vim.o.smartcase = true
 vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
---vim.o.termguicolors = true
+-- vim.o.termguicolors = true
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'

@@ -13,14 +13,18 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    -- see https://vimcolorschemes.com/
+    -- use 'Mofiqul/dracula.nvim'
+    -- use "EdenEast/nightfox.nvim"
     -- TODO: need to use true-color terminal like kitty/iterm2
-    --  use({
-    --	  'rose-pine/neovim',
-    --	  as = 'rose-pine',
-    --	  config = function()
-    --		  vim.cmd('colorscheme rose-pine')
-    --	  end
-    --  })
+    -- use({
+    --     'rose-pine/neovim',
+    --     as = 'rose-pine',
+    --     config = function()
+    --         require("rose-pine").setup()
+    --         vim.cmd('colorscheme rose-pine')
+    --     end
+    -- })
 
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
@@ -78,6 +82,7 @@ return require('packer').startup(function(use)
         -- tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
+    use {'hkupty/iron.nvim'}
 end)
 
 
