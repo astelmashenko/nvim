@@ -1,7 +1,7 @@
 -- fat cursor
 vim.opt.guicursor = ""
 
---vim.opt.termguicolors=false
+vim.opt.termguicolors=false
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -15,7 +15,7 @@ vim.opt.smartindent = true
 -- vim.opt.undofile = true
 
 -- Set highlight on search
---vim.opt.hlsearch = false
+vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- Make line numbers default

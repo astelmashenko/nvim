@@ -6,7 +6,9 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- vim.g.mapleader = " "
-vim.keymap.set("n", "<F3>", vim.cmd.Lexplore)
+-- vim.keymap.set("n", "<F3>", vim.cmd.Lexplore)
+vim.keymap.set("n", "<F3>", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<leader><F3>", vim.cmd.NvimTreeFindFile)
 
 vim.keymap.set('n', '<TAB>', '<C-w>w')
 vim.keymap.set('n', '<c-a>', 'gg<S-v>G')
