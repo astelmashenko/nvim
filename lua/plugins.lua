@@ -82,7 +82,29 @@ return require('packer').startup(function(use)
         -- tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
-    use {'hkupty/iron.nvim'}
+    use {'Vigemus/iron.nvim'}
+
+    use {
+        'lewis6991/gitsigns.nvim',
+    }
+
+
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
+    -- using packer.nvim
+    -- use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+    -- vim.opt.termguicolors = true
+    -- require("bufferline").setup{}
 end)
 
 
