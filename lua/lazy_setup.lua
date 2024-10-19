@@ -1,7 +1,6 @@
 require("lazy").setup({
   {
     "AstroNvim/AstroNvim",
-    -- branch = "v4", -- TODO: change `branch="v4"` to `version="^4"` on release
     version = "^4",
     import = "astronvim.plugins",
     opts = { -- AstroNvim options must be set here with the `import` key
