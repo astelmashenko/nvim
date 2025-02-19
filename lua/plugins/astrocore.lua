@@ -66,13 +66,14 @@ return {
           desc = "Pick to close",
         },
 
-        ["<Leader>rr"] = { ":RustRun<cr>", desc = "Rust run" },
-        ["<Leader>rt"] = { ":RustLsp testables<cr>", desc = "Rust run tests" },
+        -- ["<Leader>rr"] = { ":RustRun<cr>", desc = "Rust run" },
+        -- ["<Leader>rt"] = { ":RustLsp testables<cr>", desc = "Rust run tests" },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<Leader>r"] = { ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>", desc = "Raname symbol under cursor" },
       },
       t = {
         -- setting a mapping to false will disable it
