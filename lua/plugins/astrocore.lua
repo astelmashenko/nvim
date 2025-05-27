@@ -77,10 +77,6 @@ return {
               function(bufnr) require("astrocore.buffer").close(bufnr) end
             )
           end,
-          desc = "Close buffer from tabline",
-        },
-
-                -- ["<Leader>rr"] = { ":RustRun<cr>", desc = "Rust run" },
         -- ["<Leader>rt"] = { ":RustLsp testables<cr>", desc = "Rust run tests" },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
